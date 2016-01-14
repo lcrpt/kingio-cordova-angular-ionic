@@ -1,0 +1,26 @@
+<template name="PostsForm">
+	<div class="col-lg-8 col-md-12 col-xs-12 col-lg-offset-2">
+		<div class="jumbotron">
+			{{#if currentUser}}
+				<a id="ShowPostsTimelineForm" class="text-center"><button type="button" class="btn btn-primary">Write a Post</button></a>
+				<a id="HidePostsTimelineForm" class="text-center"><button type="button" class="btn btn-primary">Hide Form</button></a>
+				<div id="PostsTimelineForm">
+					{{#autoForm collection="Posts" id="insertPostsForm" type="method" meteormethod="insertPosts"}}
+						<fieldset>
+							<legend>Post something</legend>
+								{{> afQuickField name="searchProfileType" type="select"}}
+								<!-- {{> afQuickField name="shootingType" placeholder='Book photo, Profile Pictures, Wedding...' type='text'}} -->
+								<!-- {{> afQuickField name="address" type="googleplace" opts=optsGoogleplace}} -->
+								{{> afQuickField name='description' rows=3 placeholder='Description' type='textarea'}}
+								<!-- {{> afFieldInput name="picture" label="Choose image" remove-label="Remove"}} -->
+								{{> afQuickField name='tags'}}
+						</fieldset>
+						<button type="submit" class="btn btn-primary">Post</button>
+					{{/autoForm}}
+				</div>
+			{{else}}
+				<p><a href="/sign-in"><button class="btn btn-primary">Login</button></a> Please signIn to leave a comment.</p>
+			{{/if}}
+		</div>
+	</div>
+</template>

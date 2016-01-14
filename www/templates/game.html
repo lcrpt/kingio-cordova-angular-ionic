@@ -1,0 +1,60 @@
+<ion-view view-title="King Escape Game">
+    <ion-content>
+        <div id="game-wrapper">
+            <div id="header">
+                <p>Score: <span>{{currentScore}}</span></p>
+            </div>
+            <div id="direction-controls" class="active">
+                <div id="top-wrap" class="direction-wraps">
+                    <div id="topleft" ng-click="moveKing('topleft')" class="directional"><div class="chevron"></div></div>
+                    <div id="top" ng-click="moveKing('top')" class="directional"><div class="chevron"></div></div>
+                    <div id="topright" ng-click="moveKing('topright')" class="directional"><div class="chevron"></div></div>
+                </div>
+                <div id="center-wrap" class="direction-wraps">
+                    <div id="centerleft" ng-click="moveKing('centerleft')" class="directional"><div class="chevron"></div></div>
+                    <div id="center" ng-click="moveKing('center')" class="directional"><div class="chevron"></div></div>
+                    <div id="centerright" ng-click="moveKing('centerright')" class="directional"><div class="chevron"></div></div>
+                </div>
+                <div id="bottom-wrap" class="direction-wraps">
+                    <div id="bottomleft" ng-click="moveKing('bottomleft')" class="directional"><div class="chevron"></div></div>
+                    <div id="bottom" ng-click="moveKing('bottom')" class="directional"><div class="chevron"></div></div>
+                    <div id="bottomright" ng-click="moveKing('bottomright')" class="directional"><div class="chevron"></div></div>
+                </div>
+            </div>
+            <div id="pawn-wrapper"></div>
+            <div id="board-wrapper"></div>
+            <div id="footer-wrapper">
+                <div class="controls">
+                    <div class="inner-control">
+                        <img src="img/crowned-heart.svg" alt="">
+                        <p>{{ lifeNb }} lives</p>
+                    </div>
+                </div>
+                <div class="controls" ng-click="bomb()">
+                    <div class="inner-control">
+                        <img src="img/unlit-bomb.svg" alt="">
+                        <p>{{ bombNb }} Bomb</p>
+                    </div>
+                </div>
+                <div class="controls" ng-click="teleport()">
+                    <div class="inner-control">
+                        <img src="img/teleport.svg" alt="">
+                        <p>Teleport</p>
+                    </div>
+                </div>
+                <div class="controls" ng-click="restart()">
+                    <div class="inner-control">
+                        <img src="img/cloud-ring.svg" alt="">
+                        <p>Restart</p>
+                    </div>
+                </div>
+                <div class="controls" ng-click="quit()">
+                    <div class="inner-control">
+                        <img src="img/exit-door.svg" alt="">
+                        <p>Quit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

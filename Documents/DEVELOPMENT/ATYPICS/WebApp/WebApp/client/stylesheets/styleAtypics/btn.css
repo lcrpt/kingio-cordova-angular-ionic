@@ -1,0 +1,77 @@
+/***********BTN*************/
+.btn-lead{
+    background-color: #f84861;
+    height: 40px;
+    color: white;
+    transition: all 0.2s ease;
+}
+.btn-lead:hover{
+    background-color: white;
+    height: 40px;
+    color: #f84861;
+}
+.btn-lead p{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.btn-lead p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+.btn_see{
+    width: 140px;
+    height: 35px;
+    line-height: 25px;
+    border: 3px solid #ff7373;
+    color: #ff7373;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    transition:0.2s all ease;
+}
+.btn_see:hover{
+    width: 140px;
+    height: 35px;
+    line-height: 25px;
+    border: 3px solid #f84861;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: #f84861;
+    font-weight: bold;
+}
+
+.btn_see_photo{
+    width: 190px;
+    height: 35px;
+    line-height: 25px;
+    border: 3px solid #ff7373;
+    color: #ff7373;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    transition:0.2s all ease;
+}
+.btn_see_photo:hover{
+    width: 190px;
+    height: 35px;
+    line-height: 25px;
+    border: 3px solid #f84861;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: #f84861;
+    font-weight: bold;
+}
+.btn:hover{
+    color: #f84861;
+}
+
+@media screen and (min-width:1300px){
+    .btn_see{
+        width: 155px !important;
+    }
+    .btn_see:hover{
+        width: 155px !important;
+    }
+}

@@ -1,0 +1,55 @@
+<template name="Home">
+    <div class="bg_home">
+        <div class="row">
+            <div class="verti">
+                <div class="row title_home">
+                    <div class="col-lg-6 col-lg-offset-3 animated fadeIn center">
+                        <h1 class="shadow white_c roboto">Match making platform between <br>photographers and models</h1>
+                    </div>
+                </div>
+                <div class="row undertitle_home animated fadeIn">
+                    <div class="col-lg-8 col-lg-offset-2 center animated fadeIn ">
+                        <p class="shadow white_c roboto lege">Your flaws are full of qualities</p>
+                    </div>
+                </div>
+                <div class="top_40"></div>
+                <div class="row">
+                    <div class="center">
+                        <div class="btn-group">
+                            <a href="{{pathFor 'atSignUp'}}">
+                                <button type="button" class="btn btn-lead dropdown-toggle animated bounce size_150">
+                                    <span class="plus"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></span> Try it!
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top_50"></div>
+            <div class="row">
+                <div class="arrow">
+                    <div class="container">
+                        <div class="row">
+                            <a href="#concept" class="page-scroll">
+                                <div class="col-lg-4 col-lg-offset-4 center">
+                                    <img src="images/arrow.png" alt="arrow scroll" id="arrow_bounce" class="animated infinite bounce arrow_bounce">
+                                    <p class="white_c lege letter_space">Discover Atypcis</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="top_40"></div>
+    {{> conceptHome}}
+    <div class="top_40"></div>
+    {{> TopModels}}
+    <div class="top_40"></div>
+    {{> TopPhotographers}}
+    <div class="top_40"></div>
+    {{> sectionTryit}}
+    <div class="top_40"></div>
+    {{> sectionPost}}
+</template>

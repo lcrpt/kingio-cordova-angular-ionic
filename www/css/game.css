@@ -1,0 +1,364 @@
+#game-wrapper{
+    font-size: 0;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+/* =================================================
+=== Score header
+================================================= */
+
+#game-wrapper #header{
+    font-size: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    display: block;
+    background-color: #60503F;
+}
+
+#game-wrapper #header p{
+    font-size: 12px;
+    color: #E4D1BD;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#game-wrapper #header p span{
+    color: #fff;
+}
+
+@media only screen and (min-device-width: 500px) and (min-width: 500px){
+    #game-wrapper #header p{
+        font-size: 14px;
+    }
+}
+
+/* =================================================
+=== Board
+================================================= */
+
+#game-wrapper #board-wrapper{
+    font-size: 0;
+    top: 5%;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+}
+
+#game-wrapper #board-wrapper .cell-container .cell{
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+}
+
+#game-wrapper #board-wrapper .cell-container{
+    display: block;
+}
+
+#game-wrapper #board-wrapper .cell-container:nth-of-type(1n) .cell:nth-of-type(1n){
+    background-color: #faefe2;
+}
+
+#game-wrapper #board-wrapper .cell-container:nth-of-type(1n) .cell:nth-of-type(2n){
+    background-color: #eccdab;
+}
+
+#game-wrapper #board-wrapper .cell-container:nth-of-type(2n) .cell:nth-of-type(1n){
+    background-color: #eccdab;
+}
+
+#game-wrapper #board-wrapper .cell-container:nth-of-type(2n) .cell:nth-of-type(2n){
+    background-color: #faefe2;
+}
+
+/* =================================================
+=== Pawns
+================================================= */
+
+#game-wrapper #pawn-wrapper{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: 5%;
+    left: 0;
+    z-index: 1;
+}
+
+#game-wrapper #pawn-wrapper .king{
+    position: absolute;
+    transition: 300ms all ease-in-out;
+}
+
+#game-wrapper #pawn-wrapper .king img{
+    width: auto;
+    height: 80%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#game-wrapper #pawn-wrapper .enemy{
+    position: absolute;
+    transition: 300ms all ease-in-out;
+}
+
+#game-wrapper #pawn-wrapper .enemy img{
+    width: auto;
+    height: 50%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#game-wrapper #pawn-wrapper .obstacle{
+    position: absolute;
+    transition: 300ms all ease-in-out;
+}
+
+#game-wrapper #pawn-wrapper .obstacle img{
+    width: auto;
+    height: 60%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#game-wrapper #pawn-wrapper .bonus{
+    position: absolute;
+    transition: 300ms all ease-in-out;
+}
+
+#game-wrapper #pawn-wrapper .bonus img{
+    width: auto;
+    height: 70%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#game-wrapper #pawn-wrapper .bomb{
+    position: absolute;
+    transition: 300ms all ease-in-out;
+}
+
+#game-wrapper #pawn-wrapper .bomb img{
+    width: auto;
+    height: 60%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* =================================================
+=== Direction controls
+================================================= */
+
+#game-wrapper #direction-controls{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    font-size: 0;
+    z-index: 2;
+}
+
+#game-wrapper #direction-controls .direction-wraps{
+    width: 100%;
+    height: calc(100% / 3);
+    display: block;
+    transition: 300ms all ease-in-out;
+    opacity: 0;
+}
+
+#game-wrapper #direction-controls .direction-wraps .directional{
+    width: calc(100% / 3);
+    height: 100%;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 500ms all ease-in-out;
+}
+
+#game-wrapper #direction-controls .direction-wraps .directional .chevron{
+    background: url('../img/chevron.svg') no-repeat center;
+    background-size: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#game-wrapper #direction-controls.active .direction-wraps{
+    opacity: 1;
+}
+
+#game-wrapper #direction-controls .direction-wraps:nth-of-type(1) .directional{
+    border: inset 2px rgba(0,0,0,0.1);
+}
+
+#game-wrapper #direction-controls .direction-wraps:nth-of-type(2) .directional{
+    border-left: inset 2px rgba(0,0,0,0.1);
+    border-right: inset 2px rgba(0,0,0,0.1);
+}
+
+#game-wrapper #direction-controls .direction-wraps:nth-of-type(3) .directional{
+    border: inset 2px rgba(0,0,0,0.1);
+}
+
+#game-wrapper #direction-controls .direction-wraps .directional:nth-of-type(2){
+    border-left: 0;
+    border-right: 0;
+}
+
+/* Chevrons */
+#game-wrapper #direction-controls .direction-wraps #topleft .chevron{
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #top .chevron{
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+
+#game-wrapper #direction-controls .direction-wraps #topright .chevron{
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #centerleft .chevron{
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #center .chevron{
+    display: none;
+}
+
+#game-wrapper #direction-controls .direction-wraps #centerright .chevron{
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #bottomleft .chevron{
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #bottom .chevron{
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps #bottomright .chevron{
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#game-wrapper #direction-controls .direction-wraps .directional.clicked{
+    background-color: #fff;
+}
+
+#game-wrapper #direction-controls .direction-wraps .directional.clicked .chevron{
+    animation: chevronClick 0.5s ease-in-out;
+}
+
+@keyframes chevronClick {
+    0%   {
+        background-color: fill:rgba(0,0,0,0.4);
+    }
+    40%  {
+        background-color: fill:rgba(0,0,0,0.8);
+        background-size: 40px;
+    }
+    100% {
+        background-size: 50px;
+    }
+}
+
+/* =================================================
+=== Footer Controls
+================================================= */
+
+#footer-wrapper{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background-color: #60503F;
+}
+
+#footer-wrapper .controls{
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer-wrapper .controls .inner-control{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#footer-wrapper .controls img{
+    width: auto;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (min-device-width: 500px) and (min-width: 500px){
+    #footer-wrapper .controls img{
+        height: 35px;
+    }
+}
+
+#footer-wrapper .controls p{
+    margin: 0;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+@media only screen and (min-device-width: 500px) and (min-width: 500px){
+    #footer-wrapper .controls p{
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+

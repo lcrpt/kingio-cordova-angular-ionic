@@ -1,0 +1,37 @@
+<template name="post">
+    <article id="{{_id}}">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span>{{#each tags}} {{tags.tags}} {{/each}} - Posted {{postedTime}}</span>
+                    <a href="{{pathFor 'postPage'}}" class="btn btn-primary">Read More</a>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <img src="/images/defaultProfilePicture/{{postAuthor.profile.profilePicture}}" alt="picture user" class="img_user_post"/>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <p class="nunito lege pad_top_10 size_txt">
+                                <span class="rose_c">{{postAuthor.profile.name}}</span> is looking for a <span class="rose_c">{{searchProfileType}}</span> for a <span class="rose_c">{{shootingType}}</span>.
+                            </p>
+                        </div>
+                    </div>
+                    <p>{{description}}</p>
+                    <div class="row">
+                        {{#with FS.GetFile "images" picture}}
+                            <div class="col-sm-12 col-md-12">
+                                <div class="thumbnail">
+                                    <img src="{{this.url}}" alt="">
+                                </div>
+                            </div>
+                        {{/with}}
+                    </div>
+                    <hr>
+                    <p>{{commentsCount}} Comments</p>
+                    {{> Comments}}
+                </div>
+            </div>
+        </div>
+    </article>
+</template>

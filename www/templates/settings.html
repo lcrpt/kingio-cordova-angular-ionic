@@ -1,0 +1,37 @@
+<ion-view view-title="King Escape Settings">
+    <ion-content>
+        <div class="bar bar-header custom-header">
+            <button ng-click="homePath()">
+                <i class="ion-arrow-left-c"></i> Home
+            </button>
+            <h1 class="title">Settings</h1>
+        </div>
+        <!--  -->
+        <br/><br/>
+        <form name="settingsForm">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" ng-model="s.username" name="text" placeholder="King Name">
+                </label>
+            </div>
+            <a class="item item-positive" href="#">Music</a>
+            <li class="item item-toggle">
+                Musique
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="s.music">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <div class="item item-positive" href="#">Game Colors</div>
+            <ion-list>
+                <ion-radio ng-model="s.colorSchem" ng-value="1">Beige</ion-radio>
+                <ion-radio ng-model="s.colorSchem" ng-value="2">Black</ion-radio>
+            </ion-list>
+            <button class="button button-block custom-button" type="submit" id="submit" ng-click="refreshSettings(s)">
+                Valider
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

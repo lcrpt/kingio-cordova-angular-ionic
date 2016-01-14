@@ -1,0 +1,90 @@
+# ///// Meteor Base Packages /////
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+less
+underscore
+templating
+reactive-var
+email
+coffeescript
+
+# ///// Meteor Front End /////
+natestrauser:animate-css
+fortawesome:fontawesome
+twbs:bootstrap
+
+# ///// Meteor Accounts /////
+useraccounts:core
+accounts-base
+accounts-password
+useraccounts:bootstrap
+cunneen:mailgun
+useraccounts:iron-routing
+accounts-ui
+service-configuration
+accounts-facebook
+accounts-google
+accounts-twitter
+bozhao:accounts-instagram
+
+# ///// Meteor Router /////
+iron:router
+zimme:iron-router-active
+
+# ///// Meteor Forms && MongoDB /////
+aldeed:collection2
+aldeed:autoform
+reywood:publish-composite
+matb33:collection-hooks
+momentjs:moment
+lukemadera:autoform-googleplace
+dburles:collection-helpers
+
+# ///// Meteor Forms && MongoDB File FS /////
+yogiben:autoform-file
+cfs:standard-packages
+cfs:gridfs
+cfs:ui
+
+# ///// Meteor Security /////
+alanning:roles
+
+# ///// Meteor Admin /////
+yogiben:admin
+
+# ///// Meteor Search /////
+matteodem:easy-search
+
+# ///// Meteor Alert - Notif /////
+juliancwirko:s-alert
+juliancwirko:s-alert-stackslide
+
+# ///// Meteor JavaScript Lib /////
+underscorestring:underscore.string
+
+# ///// Meteor DEV Helpfull Packages /////
+meteortoys:allthings
+#kadira:debug
+
+# ///// Meteor SEO /////
+yasinuslu:blaze-meta
+
+# ///// Meteor SERVER /////
+cmather:handlebars-server@0.2.0
+
+
+
+# ///// Meteor New Packages /////
+bigdata:visit-tracker

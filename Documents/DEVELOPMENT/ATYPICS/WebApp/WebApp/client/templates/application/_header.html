@@ -1,0 +1,44 @@
+<template name="_header">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{pathFor 'Home'}}"><img class="logo_nav" src="/images/logo.svg" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-nav">
+                {{#if currentUser}}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <!-- {{> notifications}} -->
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i> Profile <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {{else}}
+                    <div class="navbar-right">
+                        <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+                        <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+                    </div>
+                {{/if}}
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="{{ isActiveRoute regex='home' }}"><a href="{{pathFor 'Home'}}"> Home</a></li>
+                    <li class="{{ isActiveRoute regex='home' }}"><a href="{{pathFor 'Timeline'}}"> Timeline</a></li>
+                    <li class="{{ isActiveRoute regex='models' }}"><a href="{{pathFor 'Models'}}"> Models</a></li>
+                    <li class="{{ isActiveRoute regex='photographers' }}"><a href="{{pathFor 'Photographers'}}"> Photgraphers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header_height"></div>
+</template>

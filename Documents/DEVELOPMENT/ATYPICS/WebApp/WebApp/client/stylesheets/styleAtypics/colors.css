@@ -1,0 +1,39 @@
+/*********** COLOR *************/
+.white_c{
+    color: white;
+}
+.rose_c{
+    color: #f84861;
+}
+.grey_c{
+    color: #7e7e7e;
+}
+.grey_c_lege{
+    color: #7e7e7e;
+    opacity:0.4;
+}
+.black_c{
+    color: #2f3239;
+}
+/*********** BG COLOR *************/
+.rose{
+    background-color:#f84861 !important;
+}
+.red{
+    background-color: red;
+}
+.white_bg{
+    background-color: #ffffff;
+}
+.black{
+    border: rgba(255,255,255,0.1) solid 2px;
+}
+.black_bg{
+ background-color: #2f3239;
+}
+.grey_bg{
+    background-color: #F7F7F7;
+}
+.black_bg_dark{
+    background-color: #212328;
+}

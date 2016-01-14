@@ -1,0 +1,38 @@
+<template name="UpdatePhotographer">
+	<div class="container">
+		<div class="jumbotron">
+			<h3>Create Photographer Profil</h3>
+			<hr>
+
+			<!-- {{> quickForm collection="Photographers" type="update" doc=userId}} -->
+
+			{{#autoForm collection="Photographers" id="UpdatePhotographerForm" doc=userId type="update"}}
+				<fieldset>
+					<legend>Etape 1</legend>
+					{{> afQuickField name='gender'}}
+					<!--
+					{{> afQuickField name='city'}}
+					{{> afQuickField name='country'}}
+					{{> afQuickField name='phone'}}
+					{{> afQuickField name='birthdate'}}
+					{{> afQuickField name='nationality'}}
+					<legend>Etape 2</legend>
+					{{> afQuickField name='material'}}
+					{{> afQuickField name='studio'}}
+					{{> afQuickField name='experiences'}}
+					{{> afQuickField name='professionalSituation'}}
+					{{> afQuickField name='school'}}
+					{{> afQuickField name='otherSpecificity'}}
+					<legend>Etape 3 Personnal Presentation</legend>
+					{{> afQuickField name='personnalDescr'}}
+					{{> afQuickField name='influences'}}
+					{{> afQuickField name='hobbies'}}
+					{{> afQuickField name='profilTags'}} -->
+				</fieldset>
+				<button type="submit" class="btn btn-primary">Create my Profil</button>
+			{{/autoForm}}
+
+
+		</div>
+	</div>
+</template>

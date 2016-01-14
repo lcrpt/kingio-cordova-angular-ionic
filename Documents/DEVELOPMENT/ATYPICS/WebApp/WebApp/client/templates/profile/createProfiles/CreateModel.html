@@ -1,0 +1,29 @@
+<template name="CreateModel">
+	<h3>Create my Model Profil</h3>
+	<hr>
+	<!-- {{> quickForm collection="Models" id="insertModelForm" type="method" meteormethod="insertModels"}} -->
+
+	{{#autoForm collection="Models" id="insertModelForm" type="method" meteormethod="insertModels"}}
+		<fieldset>
+			<legend>Etape 1</legend>
+			{{> afQuickField name='gender'}}
+			{{> afQuickField name='city'}}
+			{{> afQuickField name='country'}}
+			{{> afQuickField name='phone'}}
+			{{> afQuickField name='birthdate'}}
+			<legend>Etape 2</legend>
+			{{> afQuickField name='size'}}
+			{{> afQuickField name='eyes'}}
+			{{> afQuickField name='hair'}}
+			{{> afQuickField name='skin'}}
+			{{> afQuickField name='nationality'}}
+			{{> afQuickField name='otherSpecificity'}}
+			<legend>Etape 3 Personnal Presentation</legend>
+			{{> afQuickField name='personnalDescr'}}
+			{{> afQuickField name='influences'}}
+			{{> afQuickField name='hobbies'}}
+			{{> afQuickField name='profilTags'}}
+		</fieldset>
+		<button type="submit" class="btn btn-primary">Create my Profil</button>
+	{{/autoForm}}
+</template>

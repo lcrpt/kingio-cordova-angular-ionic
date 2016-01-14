@@ -1,0 +1,26 @@
+<template name="Comments">
+	<ul>
+		{{#each comments}}
+			<li>
+				<div class="row">
+					<span>{{commentedTime}}</span>
+					<p>{{author}} - {{commentText}}</p>
+				</div>
+			</li>
+			<hr>
+		{{/each}}
+	</ul>
+  	{{#if currentUser}}
+		<form name="comment" class="comment-form form">
+			<div class="form-group">
+				<div class="controls">
+					<input name="commentText" type="text" id="commentText" class="form-control" placeholder="Comment this post" required="required">
+					<!-- <span class="help-block">{{errorMessage 'body'}}</span> -->
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Add Comment</button>
+		</form>
+	{{else}}
+		<p><a href="/sign-in"><button class="btn btn-primary">Login</button></a>  Please log in to leave a comment.</p>
+	{{/if}}
+</template>

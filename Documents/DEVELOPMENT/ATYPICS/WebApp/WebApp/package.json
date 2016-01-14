@@ -1,0 +1,19 @@
+{
+    "name": "Atypics",
+    "version": "0.2.0",
+    "description": "Matchmaking between Model and Photographers.",
+    "scripts": {
+        "start": "meteor --settings settings-development.json"
+    },
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EEMI75/atypics.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/EEMI75/atypics/issues"
+    },
+    "homepage": "https://github.com/EEMI75/atypics"
+}

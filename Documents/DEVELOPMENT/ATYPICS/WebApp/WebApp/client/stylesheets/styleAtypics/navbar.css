@@ -1,0 +1,55 @@
+/***********NAVBAR*************/
+.container-fluid {
+    width: 90%;
+    margin: auto;
+}
+.navbar-inverse {
+    background-color:#2e3238;
+    color:white;
+}
+.navbar-brand img{
+    width: 50%
+}
+.navbar-text  {
+    padding: 0px 20px;
+}
+.navbar-text a{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+.navbar-btn {
+    background-color: #f84861;
+    color: #fff;
+    border: none;
+}
+.fa-facebook:hover{
+    color: #3B5998;
+    cursor: pointer;
+}
+.fa-instagram:hover{
+    color:#3f729b;
+    cursor: pointer;
+}
+.fa-twitter:hover{
+    color:#55acee;
+    cursor: pointer;
+}
+.fa-tumblr:hover{
+    color:#35465c;
+    cursor: pointer;
+}
+.navbar-text a:hover{
+    text-decoration: none;
+    color: white;
+}
+.navbar-inverse{
+    background-color:#2e3238;
+}
+.border_1{
+    border-bottom: 4px solid transparent;
+    transition:all 0.3s ease;
+}
+.border_1:hover{
+    border-bottom: 4px solid #fff;
+}

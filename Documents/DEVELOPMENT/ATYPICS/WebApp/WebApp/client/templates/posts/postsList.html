@@ -1,0 +1,37 @@
+<template name="postsList">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 col-xs-12 col-lg-offset-2">
+            <div class="jumbotron">
+                <div class="input-group input-group-lg">
+                    <h4>Search Some Posts</h4>
+                    {{> EasySearch.Input index=postsIndex class="form-control"}}
+                </div>
+                <br/><br/>
+                <ul>
+                    {{#if Template.subscriptionsReady}}
+                        <!-- search engine on postsIndex -->
+                        {{#EasySearch.Each index=postsIndex}}
+                            <!-- display posts -->
+                            {{> post}}
+                            <!-- !display posts -->
+                        {{/EasySearch.Each}}
+                        <!--  -->
+                        {{#EasySearch.IfSearching index=postsIndex}}
+                            {{> loading}}
+                        {{/EasySearch.IfSearching}}
+                        <!-- load more, limit 10 posts and $inc 10 posts more -->
+                        {{> EasySearch.LoadMore index=postsIndex content="load-more-boutton"}}
+                        <!-- If No results -->
+                        {{#EasySearch.IfNoResults index=postsIndex}}
+                            <div class="jumbotron">
+                                <p>No results found</p>
+                            </div>
+                        {{/EasySearch.IfNoResults}}
+                    {{else}}
+                        {{> loading}}
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

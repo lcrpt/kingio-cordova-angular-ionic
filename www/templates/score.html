@@ -1,0 +1,34 @@
+<ion-view view-title="King Escape Score">
+    <ion-content>
+        <div class="bar bar-header custom-header">
+            <button ng-click="homePath()">
+                <i class="ion-arrow-left-c"></i> Home
+            </button>
+            <h1 class="title">Score</h1>
+        </div>
+        <br/><br/>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/king.svg">
+                <h2>Scoreboard</h2>
+                <p>Nice game !</p>
+            </div>
+            <div class="item item-body">
+                <p>Hey {{userName}}</p>
+                <p>Your score is: {{score}}</p>
+                <p>Your best score is {{bestScore}}</p>
+                <p>Nice Score :) ! Try again to improve your skills</p>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#" ng-click="levelPath()">
+                    <i class="icon ion-thumbsup"></i>New Game
+                </a>
+                <a class="tab-item" href="#" ng-click="homePath()">
+                    <i class="icon ion-chatbox"></i>Back to home
+                </a>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

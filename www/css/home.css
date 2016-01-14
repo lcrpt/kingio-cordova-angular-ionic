@@ -1,0 +1,97 @@
+.custom-header{
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.custom-header .title{
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.custom-header button {
+    font-size: 10px;
+    color: #999;
+    background: transparent;
+    border: 0;
+    text-transform: uppercase;
+}
+
+#home-wrap{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#home-button-wrap {
+    position: absolute;
+    width: 60%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-button{
+    font-size: 8px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.custom-button.white{
+    background-color: #fff;
+}
+
+.custom-button.green{
+    color: #fff;
+    background-color: #27ae60;
+}
+
+.custom-button.blue{
+    color: #fff;
+    background-color: #3498db;
+}
+
+.custom-button.red{
+    color: #fff;
+    background-color: #e74c3c;
+}
+
+.item.item-positive{
+    font-size: 12px;
+}
+
+.item-input{
+    font-size: 10px;
+}
+
+.item-input input{
+    font-size: 10px;
+}
+
+.item.item-toggle{
+    font-size: 10px;
+}
+
+.item-content{
+    font-size: 10px;
+}
+
+.radio-icon{
+    font-size: 14px !important;
+}
+
+.item.item-toggle .toggle{
+    top: 16px;
+}
+
+.toggle .track{
+    width: 41px;
+    height: 21px;
+}
+
+.toggle .track .handle{
+    width: 17px;
+    height: 17px;
+}

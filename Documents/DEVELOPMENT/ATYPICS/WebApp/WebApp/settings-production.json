@@ -1,0 +1,25 @@
+{
+    "public": {
+        
+    },
+    "private": {
+        "meteorAccounts": {
+            "facebook": {
+                "appId": "968927846479823",
+                "secret": "8105d328da8abd82b71fe6cdcaa18dc2"
+            },
+            "google": {
+                "clientId": "585831730130-4pb32u68esj6su4fd74m1l2mrffftk2k.apps.googleusercontent.com",
+                "secret": "M6PC_DFux565IySYZCLiLYcA"
+            },
+            "twitter": {
+                "clientId": "XXXXXXXXXXXXXXXXXXXX",
+                "secret": "XXXXXXXXXXXXXXXXXXXX"
+            },
+            "instagram": {
+                "clientId": "XXXXXXXXXXXXXXXXXXXX",
+                "secret": "XXXXXXXXXXXXXXXXXXXX"
+            }
+        }
+    }
+}
